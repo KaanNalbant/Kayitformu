@@ -5,57 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kayit Formu</title>
     <style>
-        body{
+        body {
             font-family: Arial, sans-serif;
-            background-color: #f5f3f3;
-            margin: 40px;
+            background-color: #444343;
+            margin: 0;
+            padding: 20px;
         }
-        form{
+         form {
             border: 2px solid black;
-            padding: 5%;
-            /* text-align: center; */
-            background-color: rgb(102, 51, 51);
+            padding: 1%;
+            text-align: center;
+            background-color: #616060;
             color: aliceblue;
             border-collapse: collapse;
-            width: 400px;
-            margin: 0;
+            width: 350px;
+            margin: 10px;
+            padding: 60px;
             border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         }
+         label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+         }
+         input ,select {
+            border: 2px solid rgb(123, 204, 154);
+            background-color: #9b9898;
+            color: white;
+            height: 30px;
+            margin: 1px;
+            text-transform: uppercase;
+            font-size: 16px;
+            border-radius: 5px;
+         }
+         
+         h2 {
+            text-align: center;
+            color: rgb(146, 194, 97);
+         }
+         #number {
+            width: 90%;
+         }
+         #dropdown {
+            width: 90%;
+            height: 35px;
+         }
+         textarea {
+            width: 90%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 2px solid rgb(123, 204, 154);
+            background-color: #9b9898;
+            color: white;
+            font-size: 15px;
+            text-transform: none;
         }
     </style>
 </head>
 <body>
-    
     <h2>Kayit Formu</h2>
 
-    <form action="submit.html" method="get">
-        <label for="Ad">Ad:</label><br>
+    <form action="submit.html" method="get" style="justify-content: center;">
+        <label for="fullname">Fullname:</label><br>
         <input type="text" id="ad" name="ad" required>
 <br><br>
-        <label for="soyad">Soyad:</label><br>
-        <input type="text" id="soyad" name="soyad" required>
-        <br><br>
-        <label for="email">E-posta:</label><br>
+        <label for="email">E-mail:</label><br>
         <input type="email" id="email" name="email" required>
         <br><br>
-        <label for="password">Parola:</label><br>
-        <input type="password" id="password" name="password" required>
-        <br><br>
-        <label>Cinsiyet:</label>
-        <input type="radio" id="erkek" name="cinsiyet" value="erkek" required>
-        <label for="erkek">Erkek</label>
+        <label for="number" id="number-label">Yaşınız:</label>
+        <input type="number" id="number" name="age" min="18" max="100" placeholder="Yaşınızı giriniz" required>
+        <div>
+            <label for="dropdown">Hangi ülkeden geliyorsunuz?</label>
+            <select id="dropdown" name="country" required>
+                <option value="tr">Türkiye</option>
+                <option value="us">Amerika</option>
+                <option value="de">Almanya</option>
+                <option value="fr">Fransa</option>
+            </select>
+        </div>
         
-        <input type="radio" id="kadin" name="cinsiyet" value="kadin" required>
-        <label for="kadin">Kadin</label>
-<br><br>
-<label for="meyve">Favori Meyveniz:</label>
-<select name="meyve" id="meyve" required>
-    <option value="">Seciniz.</option>
-    <option value="Muz">Muz</option>
-    <option value="Cilek">Cilek</option>
-    <option value="Armut">Armut</option>
-    <option value="Kavun">Kavun</option>
-    <option value="Karpuz">Karpuz</option>
-</select>
+
 <br><br>
 <label for="mesaj">Mesajiniz:</label><br>
 <textarea name="mesaj" id="mesaj" rows="5" cols="22" placeholder="Mesajinizi Giriniz."></textarea>
@@ -64,4 +94,3 @@
 </form>
 </body>
 </html>
-
